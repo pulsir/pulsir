@@ -1,0 +1,4 @@
+pulsir
+======
+
+Pulsirov kod.
