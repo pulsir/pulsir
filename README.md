@@ -1,4 +1,5 @@
-pulsir
+Pulsir
 ======
+Ovdje se nalazi izvorni kod Pulsira.
 
-Pulsirov kod.
+(Published under the MIT license.)
