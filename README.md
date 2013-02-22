@@ -1,5 +1,1 @@
-Pulsir
-======
-Ovdje se nalazi izvorni kod Pulsira.
-
-(Published under the MIT license.)
+Documentation's over <a href="http://github.com/codin/scaffold-docs">here</a>.
