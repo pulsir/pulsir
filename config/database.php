@@ -18,7 +18,7 @@ $config['database'] = array(
 	'pass' => '',
 	
 	//  The name of the database in question
-	'name' => 'scaffold',
+	'name' => 'test',
 	
 	//  And the port (usually 3306)
 	'port' => 3306,
