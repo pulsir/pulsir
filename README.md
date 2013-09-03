@@ -1,1 +1,9 @@
-This is an old part of Pulsir's code. The new version will be posted soon, we just have some tiny things to sort out, okay?
+Hi.
+This is the Pulsir code.
+
+It's crap. Don't use this pleasepleaseplease. I'm not guilty if you go on a murder spree.
+
+http://pulsir.eu
+http://pulsir.eu/source
+
+Licence: Apache v2

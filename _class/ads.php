@@ -1,0 +1,1 @@
+<p class="ads"></p>

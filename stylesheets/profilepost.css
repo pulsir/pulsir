@@ -1,0 +1,69 @@
+body{
+background-color: #DADADA;
+}
+
+div.hedfoo{
+background-image: url('http://d.pulsir.eu/b/FernandoGarcaaRedondo.jpg');
+background-repeat:no-repeat;
+}
+
+div.heart{
+color: red;
+}
+
+div.intro{
+background-color: 556270;
+opacity:1.0;
+}
+
+div.post{
+background-color: 556270;
+opacity:1.0;
+}
+
+div.post{
+background-color: CCCCCC;
+opacity:1.0;
+}
+p{
+font-family: 'Roboto', serif;
+}
+
+h3.user{
+font-family: 'Raleway', serif;
+}
+
+
+span.badge{
+font-family: 'Source Sans Pro', sans-serif;
+color: #56daeb;
+}
+
+h3.plsr{
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+p.ads{
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+font-family: 'Inika', sans-serif;
+}
+
+.circle {
+	
+        border-radius: 45px;
+	transition: linear 0.25s;
+}
+.circle img {
+	 border-radius: 40px;
+        width: 80px;
+        height: 80px;
+        margin: 6px; /* centers the image in the parent element */
+}
+.circle:hover {
+	transition: ease-out 0.3s;
+	transform: scale(0.8) rotate(20deg) translateZ(0);
+}
+a.circle { color: transparent; } /* IE fix: removes blue border */	
