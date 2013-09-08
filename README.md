@@ -1,9 +1,7 @@
-Hi.
-This is the Pulsir code.
+# [Pulsir](http://pulsir.eu)
 
-It's crap. Don't use this pleasepleaseplease. I'm not guilty if you go on a murder spree.
+Hi and welcome to Pulsir. This is Pulsir's source.
 
-http://pulsir.eu
-http://pulsir.eu/source
+**This is stupid.** Don't use this. We need to fix up our code.
 
-Licence: Apache v2
+Licensed under the terms of APL v2.
