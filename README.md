@@ -2,7 +2,7 @@
 
 Hi and welcome to Pulsir. This is Pulsir's source.
 
-This code isn't really good at the moment, and it may produce error. We're aiming to fix them as soon as possible.
+This code isn't really good at the moment, and it may produce errors. We're aiming to fix them as soon as possible.
 
 -----
 
