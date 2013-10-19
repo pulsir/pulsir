@@ -4,8 +4,6 @@ Hi and welcome to **Pulsir**. This is Pulsir's source.
 
 This code isn't really good at the moment, and it may produce errors. We're aiming to fix them as soon as possible.
 
-[JIRA Bugtracker](ttp://pulsir.atlassian.net)
-
 -----
 
 The code in this repository is licenced under the terms of the [Apache Public Licence, version 2](http://opensource.org/licenses/Apache-2.0).
