@@ -1,4 +1,4 @@
-<!--DOCTYPE HTML-->
+<!DOCTYPE HTML>
 <head>
 <!-- fontovi -->
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Inika' rel='stylesheet' type='text/css'>
