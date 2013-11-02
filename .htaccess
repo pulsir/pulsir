@@ -1,0 +1,7 @@
+ErrorDocument 404 http://pulsir.eu/404
+ErrorDocument 500 http://pulsir.eu/down
+RewriteEngine On
+RewriteBase /
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ $1.php [NC,L]
