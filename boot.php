@@ -3,11 +3,11 @@ error_reporting(E_FATAL | E_ERROR);
 
 $dirname = dirname($_SERVER['PHP_SELF']);
 
-if($dirname = '/'){
-require_once '_class/cms_class.php';
+if ($dirname = '/') {
+  require_once '_class/cms_class.php';
 }
 else {
-require_once '../_class/cms_class.php';
+  require_once '../_class/cms_class.php';
 }
 $obj = new modernCMS();
 
@@ -20,5 +20,3 @@ $obj->db = 'pulsir';
 // Connects to the database
 $obj->connect();
 error_reporting(E_FATAL | E_ERROR);
-
-?>
