@@ -13,8 +13,8 @@ $obj = new modernCMS();
 
 // Sets the database connection variables
 $obj->host = 'localhost';
-$obj->username = 'pdb';
-$obj->password = 'justinbieber';
+$obj->username = 'mastername';
+$obj->password = 'masterpass';
 $obj->db = 'pulsir';
 
 // Connects to the database
