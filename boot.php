@@ -19,4 +19,3 @@ $obj->db = 'pulsir';
 
 // Connects to the database
 $obj->connect();
-error_reporting(E_FATAL | E_ERROR);
