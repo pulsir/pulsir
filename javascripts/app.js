@@ -38,3 +38,11 @@
   });
   
 })(jQuery);
+
+function showElement(boxid){
+   document.getElementById(boxid).style.display="block";
+}
+ 
+function hideElement(boxid){
+   document.getElementById(boxid).style.display="none";
+}

@@ -1,11 +1,31 @@
 <?php
+if($_GET['hash'] == 'rycar3'){
 $salt = '9572186cd8f2e34eb43126434391bc77$1$mwI2qhKq$CzGzM43JmtvRWwKpbbl7..$1$CHBkox0S$nEoSlWNwnTB89.U0BRsax/3862f21b65bdb8d2223ef223a978ff6f3862f21b65bdb8d2223ef223a978ff6ff6ff879a322fe3222d8bdb56b12f2683883258566443752882';
 $msg = '';
 include '_class/boot.php';
-$obj->verify_invite($_GET['hash']);
+$ct = $_COOKIE['pllsessionid'];
 if ($_POST['action']=='add'):
+$ct = 'invalid';
+$t = 'yup';
+if($_COOKIE['pllcsrfitoken']!==$_POST['token']){
+$t = 'csrf';
+}
+elseif($_COOKIE['pllcsrfitoken']!==sha1(crypt(sha1(crypt($_GET['hash'], $salt)), $_COOKIE['pllsessionid']))){
+$t = 'csrf';
+}
+if($t == 'yup'){
 $obj->add_user($_POST);
+}
 endif;
+if(!$_POST['action']=='add'){
+$token = sha1(crypt(sha1(crypt($_GET['hash'], $salt)), $ct));
+setcookie('pllcsrfitoken', $token, time()+180);
+$obj->verify_invite($_GET['hash']);
+}
+}
+else{
+die('Invalid invite. :( <a href="mailto:say.hello@pulsir.eu">Request a proper one</a>.');
+}
 ?>
 
 
@@ -24,7 +44,7 @@ endif;
 
   <title>Set up your Pulsir account</title>
   
- 
+
 
 
 
@@ -126,24 +146,49 @@ color: rgb(36, 127, 119);
 </head>
 <body>
 <div class="login">
-
+ <?php
+ if($t == 'yup'){
+ ?>
+<form action="login.php">
+ <h2>Great! Your account is now set up.</h2>
+ <p>Want a custom domain or theme? Shoot an email at say.hello@pulsir.eu and we'll be glad to help.</p>
+ <input type="submit" id="submit" class="small button" value="Log in and start posting &rarr;"><br>
+ </form>
+ <?php
+ }
+ elseif($t == 'csrf'){
+?>
+<form action="http://pulsir.eu/report/csrf.php">
+ <h2>Sorry, you can't do that.</h2>
+ <p>Seems like you've been a victim of a CSRF attack - somebody tried to submit this form from another site, probably without your permission. CSRF attacks are dangerous, and we can't stop all of them. If you wanted to sign up, <a href="invite.php?hash=rycar3">click here</a>. If not, please click on the button below. </p>
+ <input type="submit" id="submit" class="small button" value="Report this attack to help us defend from them &rarr;"><br>
+ </form>
+<?php
+}
+ else{
+ ?>
+ 
    <form action="invite.php?hash=<?php echo $_GET['hash']; ?>" method=post id="hash">
 
     <h2>Hi.</h2>
 <p>Let's start our new relationship.</p>
 <input type="hidden" name="action" id="action" value="add" />
+<input type="hidden" name="token" id="token" value="<?php echo $token; ?>" />
 <label for="username">What's your name?</label>
 <input type="text" name="username" id="username" placeholder="Will be your username. Choose wisely." required />
 <label for="password">Choose a password.</label>
 <input type="password" name="password" id="password" placeholder="Anything you want." required />
 <label for="email">Email adress.</label>
 <input type="text" name="email" id="email" placeholder="Important things only. Used for Gravatar." required />
-<input type="submit" id="submit" class="small button" value="Geronimo! &rarr;"><br>
+<input type="submit" id="submit" class="small button" value="Create an account &rarr;"><br>
 
 
 </form> 
 </div>
+<?php
+}
 
+?>
 
 
   

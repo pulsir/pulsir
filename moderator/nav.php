@@ -14,8 +14,7 @@ box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);}
 ​</style>
 <div id="menu" class="fixed style="display: block; top: 0px; "">
         <div class="inner">
-    <a href="../">Pregledaj sajt </a> |
-<a href="add-content.php">Dodaj sadrzaj</a> | <a href="manage-content.php">Upravljanje sadrzajem</a> | <a href="stuffies.php">Informacije o sustavu</a> // Moderator mode - <a href="http://pulsir.eu">povratak na Pulsir</a>
+<a href="manage-content.php">Manage content</a> // Moderator mode - <a href="http://pulsir.eu">return to Pulsir</a>
         </div>
         <div class="shadow" style="display:block;"><span></span></div>
 

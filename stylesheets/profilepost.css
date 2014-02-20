@@ -1,54 +1,6 @@
-body{
-background-color: #DADADA;
-}
-
-div.hedfoo{
-background-image: url('http://d.pulsir.eu/b/FernandoGarcaaRedondo.jpg');
-background-repeat:no-repeat;
-}
 
 div.heart{
 color: red;
-}
-
-div.intro{
-background-color: 556270;
-opacity:1.0;
-}
-
-div.post{
-background-color: 556270;
-opacity:1.0;
-}
-
-div.post{
-background-color: CCCCCC;
-opacity:1.0;
-}
-p{
-font-family: 'Roboto', serif;
-}
-
-h3.user{
-font-family: 'Raleway', serif;
-}
-
-
-span.badge{
-font-family: 'Source Sans Pro', sans-serif;
-color: #56daeb;
-}
-
-h3.plsr{
-font-family: 'Source Sans Pro', sans-serif;
-}
-
-p.ads{
-font-family: 'Source Sans Pro', sans-serif;
-}
-
-body{
-font-family: 'Inika', sans-serif;
 }
 
 .circle {

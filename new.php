@@ -1,6 +1,7 @@
 <?php
 include '_class/boot.php';
 
+
 ?>
 <!DOCTYPE html>
 
@@ -22,6 +23,7 @@ include '_class/boot.php';
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
   
+  <meta charset="utf-8" />
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
   <link rel="stylesheet" href="stylesheets/app.css">
@@ -42,16 +44,13 @@ include '_class/boot.php';
 
 <style>
 .plus{
-color:#fff;
 font-size:32px;
 text-align:right;
 position:fixed;
 top:1%;
 left:95%;
 }
-.post, .post-body, p, span{
-font-family: "Source Sans Pro", "Arial", sans-serif;
-}
+
 </style>
 
 </head>
@@ -59,42 +58,21 @@ font-family: "Source Sans Pro", "Arial", sans-serif;
 
   <div class="row">
     <div class="twelve columns">
-<div class="hedfoo">
-      <h2></h2>
-      <p></p>
-      <br />
-    </div>
-      
-    </div>
-  </div>
-
-<!-- legal stuff -->
- <div id="tos" class="reveal-modal">
-    <h2>Terms of Service</h2>
-    <p>
-     To keep Pulsir in order, you need to follow our Terms of Service. By using Pulsir, you agree that you will not:
-<ul>
-<li>break the laws of Republic of Croatia or the United States (especially discrimination/hatred-related laws, justifying or glorifying illegal acts, breaking copyright, pedophilia, abuse of animals etc.)
-<li>advertising (just buy an ad, don<?php echo'\''; ?>t spam, ffs)</li>
-<li>post spam</li>
-<li>ignore bans, restore delete posts, smash our servers </li>
-<li>troll or insult other users or provoke personal arguments</li>
-<li>post other users' personal data.</li>
-</ul>
-All posts are opinions of their authors, not Pulsir itself or its moderators, of VlexoFree hosting or the authors of the Minima platform.
-They can't be held responsible for their content, and our moderators are working on deleting posts that break the TOS, but they may not notice some posts or won't notice them at time. Please be aware of that and report all TOS-breaking posts at dev@pulsir.eu
-<br><br>
-Thanks.    </p>
-    <a class="close-reveal-modal">×</a>
-  </div></p>
-  <div class="row">
-    <div class="tvelwe columns">
          
 <div class="plus"><a href="/add">+</a></div>
-    
 
 <div class="post">
-  
+ <form action="index.php" method="post">
+ 				<input type="hidden" name="add" value="true" />
+<div class="qw" style="margin-top:20px;">
+<textarea name="body" placeholder="Just write." onclick="showElement('mt');"></textarea>
+<div id="mt" style="display:none;">
+<input type="text" name="title" id="title-field" class="ned title" placeholder="Add a title" />
+<input type="submit" id="submit" class="button" value="Publish">
+</div>
+</div>
+</form>
+
  <?php
 	
 	$obj->get_content();
@@ -105,7 +83,7 @@ Thanks.    </p>
  
 
 
-<br><br><br><br><hr>
+<div class="margin-top:8px;">
 <p> 
  
 
@@ -114,8 +92,8 @@ Thanks.    </p>
   
  <a href="http://pulsir.eu"><p style="font-family:'Source Sans Pro', sans-serif;">pulsir</p></a>
 </div>
-<div class="heart"><3</div> </p><br>
-      
+<div class="heart"><3</div></div>
+      <style>.vis{  transition: opacity 400ms; }</style>
       
 
       

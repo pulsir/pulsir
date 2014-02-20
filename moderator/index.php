@@ -6,6 +6,8 @@ if($_COOKIE['plluser'] == 'Vl@do') { $msg = ''; }
 elseif($_COOKIE['plluser'] == 'max360se') { $msg = ''; }
 elseif($_COOKIE['plluser'] == 'jazavac') { $msg = ''; }
 elseif($_COOKIE['plluser'] == 'iweb [dev]') { $msg = ''; }
+elseif($_COOKIE['plluser'] == 'ZDroid') { $msg = ''; }
+elseif($_COOKIE['plluser'] == 'krofna') { $msg = ''; }
 else { die(); }
 }
 

@@ -2,6 +2,9 @@
 $notrack = 1;
 $salt = '9572186cd8f2e34eb43126434391bc77$1$mwI2qhKq$CzGzM43JmtvRWwKpbbl7..$1$CHBkox0S$nEoSlWNwnTB89.U0BRsax/3862f21b65bdb8d2223ef223a978ff6f3862f21b65bdb8d2223ef223a978ff6ff6ff879a322fe3222d8bdb56b12f2683883258566443752882';
 $msg = '';
+if($_POST['e'] == 'ae'){
+$msg = 'To use the advanced post editor, you\'ll need to log in'; 
+}
 include '_class/boot.php';
 if(isset($_POST['username']))
 	{
@@ -31,7 +34,7 @@ setcookie('pllgroup', $group, time()+ (259200 * 7));
 setcookie('expon',$expon,time()+(259200*7));
 $msg = '<script type="text/javascript">
 
-window.location = "http://pulsir.eu/new"
+window.location = "http://pulsir.eu/'.$_POST['return'].'"
 
 </script>';			}
 			else
@@ -153,7 +156,7 @@ color: rgb(36, 127, 119);
    <form action="login.php" method=post id="login">
 <?php echo $msg; ?>
     <h1 id="logo">pulsir</h1>
-
+<input type="hidden" name="return" value="<?php if($_GET['return']){echo $_GET['return'];}else{echo 'new';} ?>" />
 <input type="text" name="username" id="username" placeholder="Username" required />
 <input type="password" name="password" id="password" placeholder="Password" required />
 <input type="submit" id="submit" class="small button" value="Log in &rarr;"><br><span><a href="mailto:dev@pulsir.eu">Trouble logging in? Contact us.</a></span>

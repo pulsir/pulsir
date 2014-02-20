@@ -1,1 +1,1 @@
-Due to security problems, this feature is disabled at the moment.
+Due to security problems, this feature is disabled at the moment. Moderators can still delete your posts, so contact them.

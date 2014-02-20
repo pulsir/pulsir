@@ -4,4 +4,4 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^(.*)$ $1.php [NC,L]
+RewriteRule ^(.*)$ get_profile.php?user=$1 [NC,L]

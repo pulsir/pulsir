@@ -40,10 +40,7 @@ include '_class/boot.php';
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
-<!-- Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200' rel='stylesheet' type='text/css'>
-
+<meta charset="utf-8">
 
 
 </head>
