@@ -1,12 +1,36 @@
-# [Pulsir](http://pulsir.eu)
+![Pulsir](https://raw.githubusercontent.com/nb333/pulsir/master/assets/img/pulsir-logo.png)
 
-Hi and welcome to **Pulsir**. This is Pulsir's source.
+## Blogs, reinvented.
 
-This code isn't really good at the moment, and it may produce errors. We're aiming to fix them as soon as possible.
+To get started, check out http://docs.pulsir.eu/
 
-To get started, check out [the docs](http://docs.pulsir.eu/).
+For more information, please see http://area51.pulsir.eu/
 
------
+**Warning:** Pulsir is experimental, early-stage software. There may be flaws.
 
-The code in this repository is licenced under the [:) license](http://license.visualidiot.com).
+## Contributing
+
+1. [Fork it](https://help.github.com/articles/fork-a-repo)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am "Added some feature"`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new [Pull Request](https://help.github.com/articles/using-pull-requests)
+
+## Bug Tracker
+
+Found a bug? Report it [here](https://github.com/pulsir/pulsir/issues/)!
+
+## Feature Request
+
+Have an idea? Add it [here](https://github.com/pulsir/pulsir/issues/)!
+
+## Contact
+
+Twitter: `@pulsir`
+
+Email: `mbm[at]pulsir.eu`
+
+## License
+
+Pulsir's source code is licensed under the [:) license](http://license.visualidiot.com).
 
