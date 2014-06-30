@@ -28,7 +28,7 @@ Have an idea? Add it [here](https://github.com/pulsir/pulsir/issues/)!
 
 Twitter: `@pulsir`
 
-Email: `mbm[at]pulsir.eu`
+Email: `say.hello[at]pulsir.eu`
 
 ## License
 
