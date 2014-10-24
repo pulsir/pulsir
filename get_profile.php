@@ -3,11 +3,17 @@
 $r = $_SERVER['REQUEST_URI'];
 
 $t = strpos($r, "?");
+$h = strpos($r, "+");
+
 if($t){
 $g = substr($r, 0, $t);
 $g = substr($g, 1);
 $p = substr($r, $t);
-
+}
+elseif($h == 1 || $h == 2){
+$topic = substr($r, 0, $h);
+$url = 'http://pulsir.eu/topic.php?topic='.$topic;
+header('Location: '.$url.'');
 }
 else{
 $g = substr($r, 1);
@@ -19,6 +25,7 @@ $b = "r = ".$r."<br> t = ".$t."<br>g = ".$g."<br>d = ".$d;
 // User data
 $u = strpos($ud_username, ".php");
 $ud_username = $_GET['user'];
+$user = $_GET['user'];
 //$f = $ud_username.'.php';
 if(file_exists($g)){
 die(header('Location: '.$d.''));
@@ -35,137 +42,19 @@ include '_class/boot.php';
 
 // Avatar Hash
 $avhash = md5( strtolower( trim( $obj->get_user_email($ud_username) ) ) );
+if($_GET['show'] == 'deleted'){
+	echo '<div class="alert alert-info">Post deleted.</div>';
+}
+$obj->get_page_header('whitey', $ud_username, $ud_username.'\'s Pulsir profile');
+$obj->get_user_css($ud_username);
+$obj->get_page_menu('whitey', $_COOKIE['plluser']);
+if($_GET['show'] == 'deleted'){
+	echo '<div class="alert alert-info">Post deleted.</div>';
+}
+echo '<p class="text-center h3">';
+echo '<img src="http://www.gravatar.com/avatar/'.$avhash.'?r=pg&d=identicon&s=64" width="64" height="64" alt="Photo">  ';
+echo htmlentities($ud_username).' ';
+echo $obj->get_user_badges($ud_username).'</p>'; 
+$obj->get_profile_posts($ud_username);
+$obj->get_page_footer('whitey');
 
-
-
-?>
-<!DOCTYPE html>
-
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
-
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-
-  <title><?php echo $ud_username; ?></title>
-  
-  <!-- Included CSS Files (Uncompressed) -->
-  <!--
-  <link rel="stylesheet" href="../../stylesheets/foundation.css">
-  -->
-  
-  <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="../../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../../stylesheets/app.css">
- <link rel="stylesheet" href="../../stylesheets/profilepost.css">
- <link rel="stylesheet" href="../../stylesheets/pv.css">
-
-
-  <script src="../../javascripts/modernizr.foundation.js"></script>
-
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  
-
-</head>
-<body>
-
-
-<div class="hedfoo">
-      <h2></h2>
-      <p></p>
-      <br />
-    </div>
-
-<div class="stuff">
-<center>
-<div class="user">
-<h3 class="user"><a href="http://pulsir.eu/<?php echo $ud_username; ?>" class="circle">
-	<?php
-echo '<img src="http://www.gravatar.com/avatar/' . $avhash , '?r=pg&d=identicon&s=64" alt="">';
-?>
-</a><a href="http://pulsir.eu/<?php echo $ud_username; ?>"> <?php echo $ud_username; ?></a></h3>
-
-</center>
-</div>
-</div>
-
-  <div class="row">
-    <div class="twelve columns">
-  
-  
- <?php
-	echo '<div class="post">';
-		$obj->get_profile_posts($ud_username);
-echo '</div>';
-	?>
-
-
- 
-
-
-<br><br><br><br><hr>
-<p> 
- </div>
-</div>
-<div class="hedfoo">
-<div class="row">
-<div class="twelve columns">
-
- <a href="http://pulsir.eu"><h3 class="plsr">pulsir</h3></a>
-</div></div></div>
-<div class="row">
-<div class="twelve columns">
-
-      
-
-    
-</p></div></div>
-
-      
-  
-  <!-- Included JS Files (Uncompressed) -->
-  <!--
-  
-  <script src="../../javascripts/modernizr.foundation.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.reveal.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.orbit.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.navigation.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.buttons.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.tabs.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.forms.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.tooltips.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.accordion.js"></script>
-  
-  <script src="../../javascripts/jquery.placeholder.js"></script>
-  
-  <script src="../../javascripts/jquery.foundation.alerts.js"></script>
-  
-  -->
-  
-  <!-- Included JS Files (Compressed) -->
-  <script src="../../javascripts/foundation.min.js"></script>
-  
-  <!-- Initialize JS Plugins -->
-  <script src="../../javascripts/app.js"></script>
-</body>
-</html>
-            

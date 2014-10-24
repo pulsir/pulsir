@@ -144,7 +144,7 @@ class Akismet {
 		$http_request .= "Host: " . $host . "\r\n";
 		$http_request .= "Content-Type: application/x-www-form-urlencoded; charset=utf-8\r\n";
 		$http_request .= "Content-Length: " . strlen($request) . "\r\n";
-		$http_request .= "User-Agent: Akismet PHP5 Class " . $this->version . " | Akismet/1.11\r\n";
+		$http_request .= "User-Agent: Pulsir/3 | Akismet PHP5 Class " . $this->version . " - Akismet/1.11\r\n";
 		$http_request .= "\r\n";
 		$http_request .= $request;
 

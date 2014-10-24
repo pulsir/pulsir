@@ -1,0 +1,1 @@
+<div class="container"><div class="cookie-consent" id="pll-cookie-warning">Hey there! Pulsir uses cookies to work, not for tracking you. Please allow access so that Pulsir can work. <a href="#" id="pll-set-cookie" class="btn btn-primary">Allow cookies</a> <small><a href="http://google.com">No way!</a></small></div></div>

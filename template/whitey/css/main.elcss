@@ -1,0 +1,14 @@
+                                                                [[include: whitey.css]]
+[[include: animate.css]]
+[[include: spotlight.elcss]]
+[[include: editor.elcss]]
+
+
+.post-snip img,
+.post-body img,
+.post-description img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+                            

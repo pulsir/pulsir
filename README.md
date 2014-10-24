@@ -1,4 +1,12 @@
+
 ![Pulsir](https://raw.githubusercontent.com/nb333/pulsir/master/assets/img/pulsir-logo.png)
+=======
+This code is unstable and a part of our version 3, which is still in development. Now and then, we set it up on area51.pulsir.eu, but that site lacks a bit behind this repo at the moment.
+
+
+
+
+# [Pulsir](http://pulsir.eu)
 
 ## Blogs, reinvented.
 
@@ -8,6 +16,7 @@ For more information, please see http://area51.pulsir.eu/
 
 **Warning:** Pulsir is experimental, early-stage software. There may be flaws.
 
+<<<<<<< HEAD
 ## Contributing
 
 1. [Fork it](https://help.github.com/articles/fork-a-repo)
@@ -16,6 +25,7 @@ For more information, please see http://area51.pulsir.eu/
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new [Pull Request](https://help.github.com/articles/using-pull-requests)
 
+The latest version of the code is on the area51 branch.
 ## Bug Tracker
 
 Found a bug? Report it [here](https://github.com/pulsir/pulsir/issues/)!

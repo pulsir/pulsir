@@ -1,0 +1,42 @@
+#title-field{
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;line-height:1.1;
+margin-top:20px;margin-bottom:10px;
+font-size:36px;
+height:46px;
+color:#247f77;
+border:none;
+box-shadow: 0 0 0 0;
+float: none;
+}
+#title-field:focus{
+	border: 1px solid #cccccc !important;
+	box-shadow: 0 0 0 0;
+float:none;
+}
+#tags-field{
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;line-height:1.1;
+font-size:14px;
+height:22px;
+border:none;
+box-shadow: 0 0 0 0;
+display:inline !important;
+float: none;
+}
+#tags-field:focus{
+	border: 1px solid #cccccc !important;
+	box-shadow: 0 0 0 0;
+float:none;
+}
+#body-field{
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;line-height:1.1;
+margin-top:20px;margin-bottom:10px;
+font-size:14px;
+border:none;
+box-shadow: 0 0 0 0;
+float: none;
+}
+#body-field:focus{
+	border: 1px solid #cccccc !important;
+	box-shadow: 0 0 0 0;
+float:none;
+}

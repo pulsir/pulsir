@@ -1,0 +1,7 @@
+.spotlight-box{
+	background-color: [[var: spotlight-color]];
+	border-color: [[var: spotlight-border-color]];
+	padding: 5px;
+	margin: 5px;
+	border-radius: 3px;
+}
