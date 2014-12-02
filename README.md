@@ -1,12 +1,5 @@
 
 ![Pulsir](https://raw.githubusercontent.com/nb333/pulsir/master/assets/img/pulsir-logo.png)
-=======
-This code is unstable and a part of our version 3, which is still in development. Now and then, we set it up on area51.pulsir.eu, but that site lacks a bit behind this repo at the moment.
-
-
-
-
-# [Pulsir](http://pulsir.eu)
 
 ## Blogs, reinvented.
 
@@ -16,7 +9,6 @@ For more information, please see http://area51.pulsir.eu/
 
 **Warning:** Pulsir is experimental, early-stage software. There may be flaws.
 
-<<<<<<< HEAD
 ## Contributing
 
 1. [Fork it](https://help.github.com/articles/fork-a-repo)
