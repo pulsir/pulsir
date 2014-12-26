@@ -26,6 +26,9 @@ $b = "r = ".$r."<br> t = ".$t."<br>g = ".$g."<br>d = ".$d;
 $u = strpos($ud_username, ".php");
 $ud_username = $_GET['user'];
 $user = $_GET['user'];
+if($user == 'me'){
+die(header('Location: /'.$_COOKIE['plluser'].''));
+}
 //$f = $ud_username.'.php';
 if(file_exists($g)){
 die(header('Location: '.$d.''));
@@ -57,4 +60,3 @@ echo htmlentities($ud_username).' ';
 echo $obj->get_user_badges($ud_username).'</p>'; 
 $obj->get_profile_posts($ud_username);
 $obj->get_page_footer('whitey');
-
