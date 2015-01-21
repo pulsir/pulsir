@@ -1,7 +1,7 @@
                                                                                                                                                                                                 </div></div></div>
 <div class="contain wow fadeInUp" style="width:100% !important;max-width:100% !important;height:820px !important;max-height:820px !important;" data-wow-duration="0.5s" data-wow-offset="0">
- <h1 class="text-center">Dead simple blogging.</h1>
- <p class="text-center lead">Tell your story to the world. It's simple, fast and free.</p>
+ <h1 class="text-center" style="text-shadow: 1px 1px 5px #fff;">Dead simple blogging.</h1>
+ <p class="text-center lead" style="text-shadow: 1px 1px 2px #fff;">Tell your story to the world. It's simple, fast and free.</p>
  <p class="text-center">
    <a class="btn btn-primary btn-learnmore" href="#features">Learn more</a>
    <a class="btn btn-primary" data-toggle="modal" data-target="#getStarted">Sign up and start posting</a>
@@ -45,6 +45,7 @@
 
   </form> <br> 
 <p style="text-align:left;"><b>We respect your privacy.</b> Your email and data won't be shared. <a href="http://docs.pulsir.eu/index.php?file=legal#08d30e35403e0e87f305ae08ff277e38">Read our privacy policy.</a></p>
+<small><p style="text-align:left;">Feel free to use any password you want, there are no limits. When picking a username, avoid non-alphanumerical characters and inappropriate usernames.</p></small>
       </div>
     </div>
   </div>
@@ -157,7 +158,7 @@
 <div class="row">
 <div class="col-md-4 first-image">
 <div class="stories wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="0.5">
-<img src="template/whitey/tas1.png" style="width:420px;">
+<img src="template/whitey/tas1.png" style="width:95%;">
 </div>
 </div>
 <div class="col-md-4 txxt">
@@ -168,7 +169,7 @@
 </div>
 <div class="col-md-4 second-image">
 <div class="stories wow fadeInUp" data-wow-duration="1.0s" data-wow-offset="1.5">
-<img src="template/whitey/tas2.png" style="width:420px;">
+<img src="template/whitey/tas2.png" style="width:95%;">
 </div>
 </div>
 
