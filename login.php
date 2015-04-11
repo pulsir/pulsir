@@ -1,4 +1,4 @@
-                                <?php
+<?php
 include 'preferences.php';
 include 'boot.php';
 include '_class/totp.php'; //includes the twofactor authentication class
@@ -53,6 +53,14 @@ if($_GET['e'] == 'lda'){
 }
 if($_GET['show'] == 'twofactor'){
 	$showtf = true;
+}
+if($_GET['request'] == 'jwt'){
+  $msg = '<div class="alert alert-info">Log in with your Pulsir account to use this application. The application did not provide any details about itself.</div>';
+  if(isset($_GET['jwt_request_app'])){
+    $msg = '<div class="alert alert-info">To use the app <b>'.$_GET['jwt_request_app'].'</b>, log in with your Pulsir account.</div>';
+  }
+  $msg .= '<div class="alert alert-info">This app will <b>know your Pulsir username, email and your Pulsir avatar</b>. It <b>will not know your password</b>, and it will not be able to post to or manage your Pulsir account.</div>';
+  $jwtPrepare = true;
 }
 if(isset($_POST['username']))
 {

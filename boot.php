@@ -1,6 +1,7 @@
 <?php
 
 error_reporting(E_ALL);
+ini_set("display_errors", 0);
 
 // leave these things alone. :(
 $dirname = dirname($_SERVER['PHP_SELF']);
@@ -18,9 +19,9 @@ $obj = new modernCMS();
 
 // database connection things! :D change this! :D
 $obj->host = 'localhost'; // the database server!
-$obj->username = 'justin'; // the user!
-$obj->password = 'biebsisamazing'; // the password!
-$obj->db = 'bieberdotcom'; // the database
+$obj->username = 'root'; // the user!
+$obj->password = ''; // the password!
+$obj->db = 'pulsir'; // the database
 
 $obj->connect(); // let's connect to the database :D
 

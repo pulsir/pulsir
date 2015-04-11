@@ -1,6 +1,6 @@
 <?php
-define('domainroot', 'http://pulsir.eu/');
-$domainroot = 'http://pulsir.eu/'; // you can change this when contributing, of course
+define('domainroot', 'http://localhost/pulsir/');
+$domainroot = 'http://localhost/pulsir/'; // you can change this when contributing, of course
 $activetheme = 'whitey';
 $debug_active = 'true';
 $disable_signup = false;
