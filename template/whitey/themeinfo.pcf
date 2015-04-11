@@ -1,7 +1,7 @@
-config-type: pl3theme;
+--config-type: pl3theme;
 title: Whitey;
 authors: Pulsir;
-version: 0.1b;
+version: 0.5;
 license: The :) license;
 min-pulsir-version: 3.0.0beta2;
 max-pulsir-version: *;
