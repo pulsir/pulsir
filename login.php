@@ -1,7 +1,9 @@
-                                <?php
+<?php
 include 'preferences.php';
 include 'boot.php';
 include '_class/totp.php'; //includes the twofactor authentication class
+include '_class/jwt/Authentication/JWT.php';
+include '_class/jwt/Exceptions/SignatureInvalidException.php';
 $cid = md5($_COOKIE['pllsessionx'].$_SERVER['REMOTE_ADDR'].$_SERVER['HTTP_USER_AGENT']);
 $totp = new Google2FA(); //two factor auth
 if($_GET['action'] == 'logout'){
@@ -54,6 +56,14 @@ if($_GET['e'] == 'lda'){
 if($_GET['show'] == 'twofactor'){
 	$showtf = true;
 }
+if($_GET['request'] == 'jwt'){
+  $msg = '<div class="alert alert-info">Log in with your Pulsir account to use this application. The application did not provide any details about itself.</div>';
+  if(isset($_GET['jwt_request_app'])){
+    $msg = '<div class="alert alert-info">To use the app <b>'.$_GET['jwt_request_app'].'</b>, log in with your Pulsir account.</div>';
+  }
+  $msg .= '<div class="alert alert-info">This app will <b>know your Pulsir username, email and your Pulsir avatar</b>. It <b>will not know your password</b>, and it will not be able to post to or manage your Pulsir account.</div>';
+  $jwtPrepare = true;
+}
 if(isset($_POST['username']))
 {
 		//login();
@@ -101,6 +111,34 @@ die(include 'template/whitey/banned.php');
 			setcookie('pllgroup', $group, $expt); 
 			setcookie('expon',$expon,$expt);
 			$sessionid = $obj->set_user_session($username, $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], time());
+
+      if($_POST['jwt'] == 'true') {
+        $jti = $sessionid;
+        $iat = time();
+        $email = $obj->get_user_email($username);
+        $name = $username;
+        $external_id = $username;
+        $secret = $obj->get_app_secret($_POST['app']);
+        $token = array(
+          "iat" => $iat,
+          "jti" => $jti,
+          "email" => $email,
+          "name" => $name,
+          "external_id" => $external_id
+        );
+      /**  $jwt = JWT::encode($token, $key);
+        $jwtPayloadURL = $obj->get_app_returnto($_POST['app']);
+        $jwtPayloadURL = str_replace("{jwt}", $jwt, $jwtPayloadURL);
+        $jwtPayloadURL = str_replace("{return}", $_POST['return'], $jwtPayloadURL);
+        header($jwtPayloadURL);
+        echo  '<script type="text/javascript">
+
+    window.location = "'.$jwtPayloadURL.'"
+
+    </script>';
+        die();
+       **/
+      }
 			if($user['verif'] == 4){setcookie('betatester', md5($username), $expt);}
 			setcookie('psid', $sessionid, $expon);
 			if($_POST['return'] == 'twofactor'){echo '<form action="twofactor.php" method="post"><input type="hidden" name="password" value="'.$_POST['twofactor'].'"><input type="submit" class="btn btn-primary" value="Continue to twofactor settings &rarr;"></form><p>We can\'t properly redirect you to this page, sorry.';}
@@ -136,6 +174,35 @@ die(include 'template/whitey/banned.php');
 		setcookie('psession', $enccookie, $expt);
 		setcookie('pllgroup', $group, $expt); 
 		setcookie('expon',$expon,$expt);
+
+    if($_POST['jwt'] == 'true') {
+      $jti = $sessionid;
+      $iat = time();
+      $email = $obj->get_user_email($username);
+      $name = $username;
+      $external_id = $username;
+      $secret = $obj->get_app_secret($_POST['app']);
+      $token = array(
+        "typ" => "JWT",
+        "alg" => "HS256",
+        "iat" => $iat,
+        "jti" => $jti,
+        "email" => $email,
+        "name" => $name,
+        "external_id" => $external_id
+      );
+      /** $jwt = JWT::encode($token, $key);
+      $jwtPayloadURL = $obj->get_app_returnto($_POST['app']);
+      $jwtPayloadURL = str_replace("{jwt}", $jwt, $jwtPayloadURL);
+      $jwtPayloadURL = str_replace("{return}", $_POST['return'], $jwtPayloadURL);
+      header($jwtPayloadURL);
+      echo  '<script type="text/javascript">
+
+    window.location = "'.$jwtPayloadURL.'"
+
+    </script>';
+      die(); **/
+    }
 		if($user['verif'] == 4){setcookie('betatester', md5($username), $expt);}
 		$sessionid = $obj->set_user_session($username, $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], time());
 		setcookie('psid', $sessionid, $expon);
@@ -173,9 +240,41 @@ elseif($user['password']==crypt($_POST['password'], $user['salt'])){
 	setcookie('plluser', $username, $expt);
 	setcookie('psession', $enccookie, $expt);
 	setcookie('pllgroup', $group, $expt); 
-	setcookie('expon',$expon,$expt);		
+	setcookie('expon',$expon,$expt);
+  $sessionid = $obj->set_user_session($username, $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], time());
+  if($_POST['jwt'] == 'true') {
+
+    $jti = $sessionid;
+    $iat = time();
+    $email = $obj->get_user_email($username);
+    $name = $username;
+    $external_id = $username;
+    $secret = $obj->get_app_secret($_POST['app']);
+    $token = array(
+      "iat" => $iat,
+      "jti" => $jti,
+      "email" => $email,
+      "name" => $name,
+      "external_id" => $external_id
+    );
+    /**var_dump($token);
+    $jwt = JWT::encode($token, $key, 'RS256');
+    var_dump($jwt);
+    $jwtPayloadURL = $obj->get_app_returnto($_POST['app']);
+    $jwtPayloadURL = str_replace("{jwt}", $jwt, $jwtPayloadURL);
+    $jwtPayloadURL = str_replace("{return}", $_POST['return'], $jwtPayloadURL);
+    $decoded = JWT::decode($jwt, $obj->get_app_secret("PulsirSupport"), array('RS256'));
+   // header($jwtPayloadURL);
+    var_dump($jwtPayloadURL);
+    //echo  '<script type="text/javascript">
+
+//    window.location = "'.$jwtPayloadURL.'"
+
+    //  </script>';
+    die();
+      **/
+  }
 	if($user['verif'] == 4){setcookie('betatester', md5($username), $expt);}
-	$sessionid = $obj->set_user_session($username, $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], time());
 	setcookie('psid', $sessionid, $expon);
 	if($_POST['return'] == 'twofactor'){echo '<form action="twofactor.php" method="post"><input type="hidden" name="password" value="'.$_POST['twofactor'].'"><input type="submit" class="btn btn-primary" value="Continue to twofactor settings &rarr;"></form><p>We can\'t properly redirect you to this page, sorry.';}
 	else{ $msg = '<script type="text/javascript">

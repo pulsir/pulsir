@@ -11,12 +11,14 @@ Other opensource projects we use in Pulsir:
 * jQuery is used by Whitey for a lot of things.
 * Heyday, the Pulsir Bootstrap fork is used as the base for Whitey. pulsir/heyday on github.
 * Mousetrap (http://craig.is/killing/mice)
+* php-jwt, a library for encoding and decoding JWT tokens in PHP. https://github.com/firebase/php-jwt.git
+* Bugsnag notifier for PHP, [https://github.com/bugsnag/bugsnag-php/][1]
 
---------------------
+---- 
 
 We're thankful to each and every one of the people who have worked on these projects, as we couldn't have built Pulsir without them.
 
-Thank you all so much. <3 from the Pulsir team.
+Thank you all so much. \<3 from the Pulsir team.
 
 
 
@@ -31,11 +33,11 @@ Thank you. All of you.
 Thank you for working on opensource.
 
 
---------------------
+---- 
 
 Any questions or concerns about how we use open source code? Feel free to send us an email at say.hello@pulsir.eu or open an issue here. Thanks, -- The Pulsir team
 
---------------------
+---- 
 
 ### Licences
 #### Parsedown
@@ -118,18 +120,18 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 #### HTML Purifier
 
 	  GNU LESSER GENERAL PUBLIC LICENSE
-		       Version 2.1, February 1999
+	           Version 2.1, February 1999
 
  Copyright (C) 1991, 1999 Free Software Foundation, Inc.
  51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
-[This is the first released version of the Lesser GPL.  It also counts
+\[This is the first released version of the Lesser GPL.  It also counts
  as the successor of the GNU Library Public License, version 2, hence
  the version number 2.1.]
 
-			    Preamble
+	            Preamble
 
   The licenses for most software are designed to take away your
 freedom to share and change it.  By contrast, the GNU General Public
@@ -174,7 +176,7 @@ modified by someone else and passed on, the recipients should know
 that what they have is not the original version, so that the original
 author's reputation will not be affected by problems that might be
 introduced by others.
-
+
   Finally, software patents pose a constant threat to the existence of
 any free program.  We wish to make sure that a company cannot
 effectively restrict the users of a free program by obtaining a
@@ -230,8 +232,8 @@ modification follow.  Pay close attention to the difference between a
 "work based on the library" and a "work that uses the library".  The
 former contains code derived from the library, whereas the latter must
 be combined with the library in order to run.
-
-		  GNU LESSER GENERAL PUBLIC LICENSE
+
+	      GNU LESSER GENERAL PUBLIC LICENSE
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. This License Agreement applies to any software library or other
@@ -277,34 +279,34 @@ Library.
   You may charge a fee for the physical act of transferring a copy,
 and you may at your option offer warranty protection in exchange for a
 fee.
-
+
   2. You may modify your copy or copies of the Library or any portion
 of it, thus forming a work based on the Library, and copy and
 distribute such modifications or work under the terms of Section 1
 above, provided that you also meet all of these conditions:
 
-    a) The modified work must itself be a software library.
-
-    b) You must cause the files modified to carry prominent notices
-    stating that you changed the files and the date of any change.
-
-    c) You must cause the whole of the work to be licensed at no
-    charge to all third parties under the terms of this License.
-
-    d) If a facility in the modified Library refers to a function or a
-    table of data to be supplied by an application program that uses
-    the facility, other than as an argument passed when the facility
-    is invoked, then you must make a good faith effort to ensure that,
-    in the event an application does not supply such function or
-    table, the facility still operates, and performs whatever part of
-    its purpose remains meaningful.
-
-    (For example, a function in a library to compute square roots has
-    a purpose that is entirely well-defined independent of the
-    application.  Therefore, Subsection 2d requires that any
-    application-supplied function or table used by this function must
-    be optional: if the application does not supply it, the square
-    root function must still compute square roots.)
+	a) The modified work must itself be a software library.
+	
+	b) You must cause the files modified to carry prominent notices
+	stating that you changed the files and the date of any change.
+	
+	c) You must cause the whole of the work to be licensed at no
+	charge to all third parties under the terms of this License.
+	
+	d) If a facility in the modified Library refers to a function or a
+	table of data to be supplied by an application program that uses
+	the facility, other than as an argument passed when the facility
+	is invoked, then you must make a good faith effort to ensure that,
+	in the event an application does not supply such function or
+	table, the facility still operates, and performs whatever part of
+	its purpose remains meaningful.
+	
+	(For example, a function in a library to compute square roots has
+	a purpose that is entirely well-defined independent of the
+	application.  Therefore, Subsection 2d requires that any
+	application-supplied function or table used by this function must
+	be optional: if the application does not supply it, the square
+	root function must still compute square roots.)
 
 These requirements apply to the modified work as a whole.  If
 identifiable sections of that work are not derived from the Library,
@@ -335,7 +337,7 @@ instead of to this License.  (If a newer version than version 2 of the
 ordinary GNU General Public License has appeared, then you can specify
 that version instead if you wish.)  Do not make any other change in
 these notices.
-
+
   Once this change is made in a given copy, it is irreversible for
 that copy, so the ordinary GNU General Public License applies to all
 subsequent copies and derivative works made from that copy.
@@ -386,7 +388,7 @@ Library will still fall under Section 6.)
 distribute the object code for the work under the terms of Section 6.
 Any executables containing that work also fall under Section 6,
 whether or not they are linked directly with the Library itself.
-
+
   6. As an exception to the Sections above, you may also combine or
 link a "work that uses the Library" with the Library to produce a
 work containing portions of the Library, and distribute that work
@@ -402,37 +404,37 @@ copyright notice for the Library among them, as well as a reference
 directing the user to the copy of this License.  Also, you must do one
 of these things:
 
-    a) Accompany the work with the complete corresponding
-    machine-readable source code for the Library including whatever
-    changes were used in the work (which must be distributed under
-    Sections 1 and 2 above); and, if the work is an executable linked
-    with the Library, with the complete machine-readable "work that
-    uses the Library", as object code and/or source code, so that the
-    user can modify the Library and then relink to produce a modified
-    executable containing the modified Library.  (It is understood
-    that the user who changes the contents of definitions files in the
-    Library will not necessarily be able to recompile the application
-    to use the modified definitions.)
-
-    b) Use a suitable shared library mechanism for linking with the
-    Library.  A suitable mechanism is one that (1) uses at run time a
-    copy of the library already present on the user's computer system,
-    rather than copying library functions into the executable, and (2)
-    will operate properly with a modified version of the library, if
-    the user installs one, as long as the modified version is
-    interface-compatible with the version that the work was made with.
-
-    c) Accompany the work with a written offer, valid for at
-    least three years, to give the same user the materials
-    specified in Subsection 6a, above, for a charge no more
-    than the cost of performing this distribution.
-
-    d) If distribution of the work is made by offering access to copy
-    from a designated place, offer equivalent access to copy the above
-    specified materials from the same place.
-
-    e) Verify that the user has already received a copy of these
-    materials or that you have already sent this user a copy.
+	a) Accompany the work with the complete corresponding
+	machine-readable source code for the Library including whatever
+	changes were used in the work (which must be distributed under
+	Sections 1 and 2 above); and, if the work is an executable linked
+	with the Library, with the complete machine-readable "work that
+	uses the Library", as object code and/or source code, so that the
+	user can modify the Library and then relink to produce a modified
+	executable containing the modified Library.  (It is understood
+	that the user who changes the contents of definitions files in the
+	Library will not necessarily be able to recompile the application
+	to use the modified definitions.)
+	
+	b) Use a suitable shared library mechanism for linking with the
+	Library.  A suitable mechanism is one that (1) uses at run time a
+	copy of the library already present on the user's computer system,
+	rather than copying library functions into the executable, and (2)
+	will operate properly with a modified version of the library, if
+	the user installs one, as long as the modified version is
+	interface-compatible with the version that the work was made with.
+	
+	c) Accompany the work with a written offer, valid for at
+	least three years, to give the same user the materials
+	specified in Subsection 6a, above, for a charge no more
+	than the cost of performing this distribution.
+	
+	d) If distribution of the work is made by offering access to copy
+	from a designated place, offer equivalent access to copy the above
+	specified materials from the same place.
+	
+	e) Verify that the user has already received a copy of these
+	materials or that you have already sent this user a copy.
 
   For an executable, the required form of the "work that uses the
 Library" must include any data and utility programs needed for
@@ -448,7 +450,7 @@ restrictions of other proprietary libraries that do not normally
 accompany the operating system.  Such a contradiction means you cannot
 use both them and the Library together in an executable that you
 distribute.
-
+
   7. You may place library facilities that are a work based on the
 Library side-by-side in a single library together with other library
 facilities not covered by this License, and distribute such a combined
@@ -456,14 +458,14 @@ library, provided that the separate distribution of the work based on
 the Library and of the other library facilities is otherwise
 permitted, and provided that you do these two things:
 
-    a) Accompany the combined library with a copy of the same work
-    based on the Library, uncombined with any other library
-    facilities.  This must be distributed under the terms of the
-    Sections above.
-
-    b) Give prominent notice with the combined library of the fact
-    that part of it is a work based on the Library, and explaining
-    where to find the accompanying uncombined form of the same work.
+	a) Accompany the combined library with a copy of the same work
+	based on the Library, uncombined with any other library
+	facilities.  This must be distributed under the terms of the
+	Sections above.
+	
+	b) Give prominent notice with the combined library of the fact
+	that part of it is a work based on the Library, and explaining
+	where to find the accompanying uncombined form of the same work.
 
   8. You may not copy, modify, sublicense, link with, or distribute
 the Library except as expressly provided under this License.  Any
@@ -489,7 +491,7 @@ subject to these terms and conditions.  You may not impose any further
 restrictions on the recipients' exercise of the rights granted herein.
 You are not responsible for enforcing compliance by third parties with
 this License.
-
+
   11. If, as a consequence of a court judgment or allegation of patent
 infringement or for any other reason (not limited to patent issues),
 conditions are imposed on you (whether by court order, agreement or
@@ -541,7 +543,7 @@ conditions either of that version or of any later version published by
 the Free Software Foundation.  If the Library does not specify a
 license version number, you may choose any version ever published by
 the Free Software Foundation.
-
+
   14. If you wish to incorporate parts of the Library into other free
 programs whose distribution conditions are incompatible with these,
 write to the author to ask for permission.  For software which is
@@ -551,7 +553,7 @@ decision will be guided by the two goals of preserving the free status
 of all derivatives of our free software and of promoting the sharing
 and reuse of software generally.
 
-			    NO WARRANTY
+	            NO WARRANTY
 
   15. BECAUSE THE LIBRARY IS LICENSED FREE OF CHARGE, THERE IS NO
 WARRANTY FOR THE LIBRARY, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
@@ -574,9 +576,9 @@ FAILURE OF THE LIBRARY TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
 SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
 DAMAGES.
 
-		     END OF TERMS AND CONDITIONS
-
-           How to Apply These Terms to Your New Libraries
+	         END OF TERMS AND CONDITIONS
+
+	       How to Apply These Terms to Your New Libraries
 
   If you develop a new library, and you want it to be of the greatest
 possible use to the public, we recommend making it free software that
@@ -589,22 +591,22 @@ safest to attach them to the start of each source file to most effectively
 convey the exclusion of warranty; and each file should have at least the
 "copyright" line and a pointer to where the full notice is found.
 
-    <one line to give the library's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
-
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Lesser General Public
-    License as published by the Free Software Foundation; either
-    version 2.1 of the License, or (at your option) any later version.
-
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public
-    License along with this library; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+	<one line to give the library's name and a brief idea of what it does.>
+	Copyright (C) <year>  <name of author>
+	
+	This library is free software; you can redistribute it and/or
+	modify it under the terms of the GNU Lesser General Public
+	License as published by the Free Software Foundation; either
+	version 2.1 of the License, or (at your option) any later version.
+	
+	This library is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+	Lesser General Public License for more details.
+	
+	You should have received a copy of the GNU Lesser General Public
+	License along with this library; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 Also add information on how to contact you by electronic and paper mail.
 
@@ -613,7 +615,7 @@ school, if any, to sign a "copyright disclaimer" for the library, if
 necessary.  Here is a sample; alter the names:
 
   Yoyodyne, Inc., hereby disclaims all copyright interest in the
-  library `Frob' (a library for tweaking knobs) written by James Random Hacker.
+  library \`Frob' (a library for tweaking knobs) written by James Random Hacker.
 
   <signature of Ty Coon>, 1 April 1990
   Ty Coon, President of Vice
@@ -655,7 +657,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ====
 
-All files located in the node_modules and external directories are
+All files located in the node\_modules and external directories are
 externally maintained libraries used by this software which have their
 own licenses; we recommend you read them, as their terms may differ from
 the terms above.
@@ -724,22 +726,82 @@ You may add Your own copyright statement to Your modifications and may provide a
 END OF TERMS AND CONDITIONS
 
 APPENDIX: How to apply the Apache License to your work
-To apply the Apache License to your work, attach the following boilerplate notice, with the fields enclosed by brackets "[]" replaced with your own identifying information. (Don't include the brackets!) The text should be enclosed in the appropriate comment syntax for the file format. We also recommend that a file or class name and description of purpose be included on the same "printed page" as the copyright notice for easier identification within third-party archives.
+To apply the Apache License to your work, attach the following boilerplate notice, with the fields enclosed by brackets "\[]" replaced with your own identifying information. (Don't include the brackets!) The text should be enclosed in the appropriate comment syntax for the file format. We also recommend that a file or class name and description of purpose be included on the same "printed page" as the copyright notice for easier identification within third-party archives.
 
-Copyright [yyyy] [name of copyright owner]
+Copyright \[yyyy]\[name of copyright owner]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+	http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
--------------
+
+#### php-jwt
+3-Clause BSD
+
+Copyright (c) 2011, Neuman Vong
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+	* Redistributions of source code must retain the above copyright
+	  notice, this list of conditions and the following disclaimer.
+	
+	* Redistributions in binary form must reproduce the above
+	  copyright notice, this list of conditions and the following
+	  disclaimer in the documentation and/or other materials provided
+	  with the distribution.
+	
+	* Neither the name of Neuman Vong nor the names of other
+	  contributors may be used to endorse or promote products derived
+	  from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+### Bugsnag notifier for PHP
+The MIT Licence
+
+Copyright (c) 2013 Bugsnag
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+---- 
 
 **These projects are not modified or are modified under the terms of the original license. The code their authors have written is, while used by Pulsir, is not licensed under the same license as Pulsir - it is licensed under the original license and just used by Pulsir under the terms of the original license** 
   
+
+[1]:	https://github.com/bugsnag/bugsnag-php/

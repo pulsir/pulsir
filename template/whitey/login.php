@@ -1,4 +1,4 @@
-                                                                <style>
+<style>
       body {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -43,7 +43,8 @@
 <div class="container">
 
       <form class="form-signin" action="login.php" method="post" role="form">
-        <input type="hidden" name="return" value="<?php if($_GET['return']){echo htmlentities($_GET['return']);}else{echo 'new';} ?>" />
+        <input type="hidden" name="return" value="<?php if($_GET['return']){echo htmlentities($_GET['return']);}elseif($_GET['return_to']){echo htmlentities($_GET['return_to']);}else{echo 'new';} ?>" />
+        <?php if($jwtPrepare == true) { echo '<input type="hidden" name="jwt" value="true"><input type="hidden" name="app" value="'.$_GET['jwt_request_app'].'">'; } ?>
         <h1 class="text-center"><a href="index.php"><img src="http://d.pulsir.eu/assets/midres-final2-logo.png" width=64 style="border-radius:3px;" alt="Pulsir"></a></h1>
 	<?php echo $msg; ?>
         <input type="username" name="username" class="form-control" placeholder="Username" required autofocus>

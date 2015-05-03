@@ -44,8 +44,8 @@ class modernCMS {
 	function purify($body){
 		require_once 'HTMLPurifier.standalone.php';
 		$config = HTMLPurifier_Config::createDefault();
-    $config->set('Core', 'Encoding', 'UTF-8'); // replace with your encoding
-    $config->set('HTML', 'Doctype', 'HTML 4.01 Transitional'); // replace with your doctype
+    $config->set('Core.Encoding', 'UTF-8'); // replace with your encoding
+    $config->set('HTML.Doctype', 'HTML 4.01 Transitional'); // replace with your doctype
     $purifier = new HTMLPurifier($config);
     $body = $purifier->purify($body);
     return $body;
@@ -90,17 +90,18 @@ class modernCMS {
   			}
   			echo '<div class="post-snip">';
   			$body = $row['body'];
-  			$abm = '</i><br><abbr title="Trimmed, click to read in full." /><a href="p.php?id=' . $row['id'] . '">(...)</a></abbr>';
   			$body = stripslashes(((strlen($body) > 200) ? substr($body,0,197) : $body));
 				//$body = strip_tags($body, "<p><br></p></br><img></img><ul><li><ol></ul></li></ul>");
-  			$body = $body.$abm;
+
   			if($row['tags'] == 'nsfw'){$body = '<b style="color:red;">NSFW</b> This post is not safe for work/school environments and can contain adult content. Be warned.';} 
   			include_once 'Parsedown.php';
   			$Parsedown = new Parsedown();
   			$body = $Parsedown->text(stripslashes($body));
   			$body = $this->purify($body);
+        $abm = '</i><br><abbr title="Trimmed, click to read in full." /><a href="p.php?id=' . $row['id'] . '">(...)</a></abbr>';
+        $body = $body.$abm;
 
-  			echo $body;
+        echo $body;
   			echo '</div></article><hr>';
 
 
@@ -1638,10 +1639,101 @@ function delete_user($user) {
 
   }
 
+  /** gets the secret app token for a specified app name **/
+  function get_app_secret($app = '') {
+
+    $jwtSecurityFail = '
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Something went wrong.</title>
+  <style>
+    body, a:link {
+      background-color: #400318;
+      color: #fefefe !important;
+      font-family: "Helvetica Neue", "Arial", sans-serif;
+    }
+  </style>
+</head>
+<body>
+<h1>Something went wrong.</h1>
+<p>We couldn\'t find an app token for your login request. This could mean a lot of things, but hopefully it\'s just a simple mistake. <a href="http://pulsir.eu/login">Try logging in to Pulsir normally</a></a></p>
+</body>
+</html>';
+    if($app != ''):
+      $id = mysql_real_escape_string($id);
+      $sql = "SELECT * FROM tblApps WHERE appname = '$app'";
+
+
+    else:
+      die('$jwtSecurityFail');
+    endif;
 
 
 
+    $res = mysql_query($sql) or die(mysql_error());
 
+    if(mysql_num_rows($res) !=0):
+      while($row = mysql_fetch_assoc($res)) {
+        return $row['secret'];
+
+
+      }
+    else:
+      die($jwtSecurityFail);
+    endif;
+
+  }
+
+
+
+  /** gets the payload return url for a specified app name **/
+  function get_app_returnto($app = '') {
+
+    $jwtSecurityFail = '
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Something went wrong.</title>
+  <style>
+    body, a:link {
+      background-color: #400318;
+      color: #fefefe !important;
+      font-family: "Helvetica Neue", "Arial", sans-serif;
+    }
+  </style>
+</head>
+<body>
+<h1>Something went wrong.</h1>
+<p>We couldn\'t find a return URL for the app you are trying to use. This is probably just the app being misconfigured. Sorry about that. <a href="http://pulsir.eu/login">Try logging in to Pulsir normally</a></a></p>
+</body>
+</html>';
+    if($app != ''):
+      $id = mysql_real_escape_string($id);
+      $sql = "SELECT * FROM tblApps WHERE appname = '$app'";
+
+
+    else:
+      die('$jwtSecurityFail');
+    endif;
+
+
+
+    $res = mysql_query($sql) or die(mysql_error());
+
+    if(mysql_num_rows($res) !=0):
+      while($row = mysql_fetch_assoc($res)) {
+        return $row['returnto'];
+
+
+      }
+    else:
+      die($jwtSecurityFail);
+    endif;
+
+  }
 
 
 	}	 // ends the class
