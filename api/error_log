@@ -1,7 +1,0 @@
-[23-Sep-2014 16:10:12 Europe/Zagreb] PHP Notice:  Undefined variable: notrack in /home/area51p/public_html/_class/cms_class.php on line 9
-[23-Sep-2014 16:10:12 Europe/Zagreb] PHP Notice:  Undefined index: pllsessionid in /home/area51p/public_html/_class/cms_class.php on line 11
-[23-Sep-2014 16:10:12 Europe/Zagreb] PHP Notice:  Undefined index: darkmode in /home/area51p/public_html/_class/cms_class.php on line 22
-[23-Sep-2014 16:10:12 Europe/Zagreb] PHP Notice:  Undefined index: nosnow in /home/area51p/public_html/_class/cms_class.php on line 26
-[23-Sep-2014 16:10:18 Europe/Zagreb] PHP Notice:  Undefined variable: notrack in /home/area51p/public_html/_class/cms_class.php on line 9
-[23-Sep-2014 16:10:18 Europe/Zagreb] PHP Notice:  Undefined index: darkmode in /home/area51p/public_html/_class/cms_class.php on line 22
-[23-Sep-2014 16:10:18 Europe/Zagreb] PHP Notice:  Undefined index: nosnow in /home/area51p/public_html/_class/cms_class.php on line 26
