@@ -1,5 +1,5 @@
 
-![Pulsir](https://raw.githubusercontent.com/nb333/pulsir/master/assets/img/pulsir-logo.png)
+![Pulsir](https://raw.githubusercontent.com/pulsir/pulsir/master/assets/img/pulsir-logo.png)
 
 ## Blogs, reinvented.
 
