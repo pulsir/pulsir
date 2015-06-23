@@ -31,11 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="boot.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="boot.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.54888505" vertical-offset="425" max-vertical-offset="1008">
+            <state vertical-scroll-proportion="11.851851" vertical-offset="425" max-vertical-offset="1008">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pic.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/pic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.1111112" vertical-offset="0" max-vertical-offset="210">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preferences.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="preferences.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/preferences.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7777777" vertical-offset="0" max-vertical-offset="336">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.28816468" vertical-offset="0" max-vertical-offset="583">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -517,14 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preferences.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7777777" vertical-offset="0" max-vertical-offset="336">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/down.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="61.444443" vertical-offset="1659" max-vertical-offset="5523">
@@ -551,8 +553,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/boot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.54888505" vertical-offset="425" max-vertical-offset="1008">
+        <state vertical-scroll-proportion="11.851851" vertical-offset="425" max-vertical-offset="1008">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/pic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1111112" vertical-offset="0" max-vertical-offset="210">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preferences.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28816468" vertical-offset="0" max-vertical-offset="583">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="44" />
           <folding />
         </state>
       </provider>
