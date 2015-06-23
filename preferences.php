@@ -8,3 +8,4 @@ $disable_login = false;
 $disable_pass_reset = false;
 define('bugsnagAPIKey', "------");
 define('bugsnagReleaseStage', "development");
+define('downtimeTogglingAPIToken', '12345');

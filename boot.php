@@ -1,7 +1,9 @@
 <?php
-
+if((file_exists("downtime.lock")) || (file_exists("../downtime.lock"))){
+  die('Header: down.php'); // let's hope git isn't doing anything to that file.
+}
 error_reporting(E_ALL);
-//ini_set("display_errors", 0);
+ini_set("display_errors", 0);
 
 // leave these things alone. :(
 $dirname = dirname($_SERVER['PHP_SELF']);
