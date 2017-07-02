@@ -2,6 +2,8 @@ ErrorDocument 404 http://pulsir.eu/404
 ErrorDocument 500 http://pulsir.eu/down
 RewriteEngine On
 RewriteBase /
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ get_profile.php?user=$1 [NC,L]
