@@ -1,6 +1,8 @@
 
 ![Pulsir](https://raw.githubusercontent.com/pulsir/pulsir/master/assets/img/pulsir-logo.png)
 
+We're working on Pulsir 4! Help us out at [pulsir/pulsir4](https://github.com/pulsir/pulsir4)
+
 ## Blogs, reinvented.
 
 To get started, check out http://docs.pulsir.eu/
